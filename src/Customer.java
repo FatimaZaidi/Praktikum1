@@ -21,7 +21,7 @@ public class Customer {
 
 
 
-/***********************GETTER*********************/
+/***********************GETTER**********************/
 	public String getVorname() {
 		return vorname;
 	}

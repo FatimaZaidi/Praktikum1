@@ -9,18 +9,18 @@ public class Webshop {
 	
 	private ArrayList <Customer> list= new ArrayList<Customer>(); 
 	
-	/*F�gt Customer hinzu*/
+	/*Fügt Customer hinzu*/
 	public void addCustomer( String vorname, String nachname){
 		Customer eintrag= new Customer(vorname, nachname);
 		appendEintragAnListe(eintrag);
 	}
-       /*Private Methode, die den Customer an das Ende der Liste eintr�gt*/
+       /*Private Methode, die den Customer an das Ende der Liste einträgt*/
 	private void appendEintragAnListe(Customer eintrag) {
 		if (eintrag != null){
 			list.add(eintrag);
 		}
 	}
-	/*Methode zum l�schen*/
+	/*Methode zum löschen*/
 	public boolean removeCustomer(int id, String nachname, String vorname){
 		
 		for (Customer e: list){
@@ -35,18 +35,18 @@ public class Webshop {
 	
 	
 	
-	/*Pr�ft ob in der Liste ein Customer mit den gegebenen Namen und Vornamen vorhanden ist*/
+	/*Prüft ob in der Liste ein Customer mit den gegebenen Namen und Vornamen vorhanden ist*/
 	public boolean getCustomerFromList(String vorname, String nachname){
 		for (Customer element: list){
 			if (element.getNachname().equals(nachname)&& element.getVorname().equals(vorname)){
-				//System.out.println("�bereinstimmung gefunden");
+				//System.out.println(„Übereinstimmung gefunden");
 				return true;
 			}
 		}return false;
 	}
 	
 	
-	/*Gibt die sortierte Liste zur�ck*/
+	/*Gibt die sortierte Liste zurück*/
 	public void printListOfCustomer(SortingCriterion mode){
 		switch (mode) {
 		
@@ -79,17 +79,17 @@ public class Webshop {
 		
 	
 	
-	/*gibt die Liste zur�ck*/
+	/*gibt die Liste zurück*/
 	 public List<Customer>getListe(){
 		 return list;
 	 }
-	 /*Liste l�schen*/
+	 /*Liste löschen*/
 	 public void listeLöschen(){
 		 list.clear();
 		 
 	 }
 	 
-	 /*Gibt Liste als Aray zur�ck*/
+	 /*Gibt Liste als Aray zurück*/
 		public Customer []   getListeAlsArray() {
 		
 	
